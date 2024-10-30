@@ -50,6 +50,12 @@ const Timer: React.FC<TimerProps> = ({ title, endTime, elapsedTime = 0 }) => {
     };
   }, [isRunning, timeLeft, timeCounter, endTime]);
 
+  
+  useEffect(() => {
+    setTimeLeft(endTime - elapsedTime);
+    setTimeCounter(elapsedTime);
+  }, [elapsedTime, endTime]);
+
   const startTimer = () => {
     setIsRunning(true);
     setIsEnded(false);
@@ -85,9 +91,15 @@ const Timer: React.FC<TimerProps> = ({ title, endTime, elapsedTime = 0 }) => {
     return `${String(minutes).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
   };
 
+
+  const radius = 95;
+  const circumference = 2 * Math.PI * radius;
+
+
+  const progress = (timeCounter / endTime) * circumference;
+
   return (
       <div style={styles.container}>
-
         <button style={styles.settingsButton} onClick={() => setShowSettings(true)}>⚙️</button>
 
         {showSettings && (
@@ -130,7 +142,33 @@ const Timer: React.FC<TimerProps> = ({ title, endTime, elapsedTime = 0 }) => {
             </div>
         )}
 
-        <div style={styles.circle(isEnded)}>
+        <div style={styles.circleContainer}>
+          <svg width="200" height="200">
+            {/* Фон круга */}
+            <circle
+                cx="100"
+                cy="100"
+                r={radius}
+                fill="transparent"
+                stroke="#545576"
+                strokeWidth="10"
+            />
+
+            <circle
+                cx="100"
+                cy="100"
+                r={radius}
+                fill="transparent"
+                stroke="#67cb88"
+                strokeWidth="10"
+                strokeDasharray={circumference}
+                strokeDashoffset={circumference - progress}
+                strokeLinecap="round"
+                transform="rotate(-90 100 100)"
+                style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+            />
+          </svg>
+          {/* Текст поверх кругов */}
           <div style={styles.text}>
             <h2>{title}</h2>
             <p style={styles.timer}>{formatTime(timeCounter)}</p>
@@ -167,20 +205,22 @@ const styles = {
     fontSize: '20px',
     cursor: 'pointer',
     color: '#a2a4cb',
+    zIndex: 2,
   },
-  circle: (isEnded: boolean) => ({
+  circleContainer: {
+    position: 'relative' as 'relative',
     width: '200px',
     height: '200px',
-    borderRadius: '50%',
-    backgroundColor: isEnded ? '#cb6767' : '#545576',
-    border: '8px solid #67cb88',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    transition: isEnded ? 'background-color 0.5s linear infinite' : 'none',
-  }),
+    zIndex: 0,
+  },
   text: {
-    textAlign: 'center' as 'center'
+    position: 'absolute' as 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    textAlign: 'center' as 'center',
+    color: '#ffffff',
+    zIndex: 1,
   },
   timer: {
     fontSize: '36px',
@@ -192,7 +232,7 @@ const styles = {
   buttons: {
     display: 'flex',
     justifyContent: 'space-around' as 'space-around',
-    marginTop: '20px'
+    marginTop: '20px',
   },
   button: {
     backgroundColor: 'transparent',
@@ -212,6 +252,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    zIndex: 3,
   },
   modalContent: {
     backgroundColor: '#333',
