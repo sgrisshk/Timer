@@ -1,5 +1,5 @@
 import React from 'react';
-import { Meta, Story } from '@storybook/addon-docs/blocks';
+import { Meta, StoryFn } from '@storybook/react';
 import Timer from './TimerProps';
 
 type TimerProps = {
@@ -27,9 +27,9 @@ export default {
         elapsedTime: { control: 'number' },
         isRunning: { control: 'boolean' },
     },
-} as ComponentMeta<typeof Timer>;
+} as Meta<typeof Timer>;
 
-const Template: ComponentStory<typeof Timer> = (args: TimerProps) => <Timer {...args} />;
+const Template: StoryFn<TimerProps> = (args: TimerProps) => <Timer {...args} />;
 
 export const DefaultTimer = Template.bind({});
 DefaultTimer.args = {
@@ -48,7 +48,6 @@ TimerWithSavedTimers.args = {
         { id: 2, title: 'Exercise', minutes: 10, seconds: 0, audioFile: 'default-sound.mp3', audioFileName: 'Default', elapsedTime: 0 },
     ],
 };
-
 
 export const TimerWithElapsedTime = Template.bind({});
 TimerWithElapsedTime.args = {
