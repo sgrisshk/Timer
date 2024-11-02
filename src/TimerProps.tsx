@@ -89,7 +89,7 @@ const Timer: React.FC<TimerProps> = ({ title: initialTitle, endTime, elapsedTime
       if (timeLeftInterval) clearInterval(timeLeftInterval);
       if (timeCounterInterval) clearInterval(timeCounterInterval);
     };
-  }, [isRunning, timeLeft, timeCounter, userEndTime, isEnded, isMuted]);
+  }, [isRunning, timeLeft, timeCounter, userEndTime, isEnded, isMuted, endTime]);
 
   const startTimer = () => {
     setIsRunning(true);
