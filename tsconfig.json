@@ -6,6 +6,7 @@
       "dom.iterable",
       "esnext"
     ],
+    "types": ["@storybook/react", "node"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
