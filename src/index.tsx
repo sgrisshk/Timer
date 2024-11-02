@@ -7,6 +7,6 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Timer title={"Timer"} endTime={0} elapsedTime={0}/>
+    <Timer title={"my timer"} endTime={33} elapsedTime={13}/>
   </React.StrictMode>
 );
