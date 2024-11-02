@@ -25,14 +25,16 @@ To get started, ensure you have [Node.js](https://nodejs.org/) installed on your
 
 2. Install the dependencies:
    ```
-      npm install
+   npm install
+   ```
  
-3.	Start the application in development mode:
-   ```
-      npm start
-   ```
+4.	Start the application in development mode:
+    ```
+    npm start
+    ```
+   
 
-4.	Open http://localhost:3000 in your browser to see the app in action.
+5.	Open http://localhost:3000 in your browser to see the app in action.
 
 ## Usage
 
@@ -72,7 +74,7 @@ Defines the structure for saved timers in the application:
 	•	title (string): Title of the saved timer.
 	•	minutes (number): Minutes set for the timer.
 	•	seconds (number): Seconds set for the timer.
-	•	audioFile (string): URL of the custom audio file.
+	•	audioFile (string): access to a local audiofile.
 	•	audioFileName (string): Display name of the audio file.
 	•	elapsedTime (number): The elapsed time in seconds.
 
