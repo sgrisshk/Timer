@@ -428,7 +428,7 @@ body, html {
     }
 
     .buttons {
-        width: 80%;
+        width: 60%;
         display: flex;
         justify-content: space-around;
         margin-top: 67px;
