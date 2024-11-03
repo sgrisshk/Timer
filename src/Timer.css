@@ -400,93 +400,85 @@ body {
     height: 35px;
 }
 
-
+ 
 @media (max-width: 480px) {
 
     .app-outer-wrapper {
-        padding: 10px;
+        padding: 5px;
     }
 
     .header-bar {
-        padding: 8px;
+        padding: 6px;
         top: 5px;
     }
 
     .header-title {
-        font-size: 16px;
-        margin-bottom: 4px;
+        font-size: 14px;
     }
 
     .header-slogan {
-        font-size: 12px;
-        margin-top: 0;
-    }
-
-    .timer-container {
-        width: 220px;
-        height: 220px;
-        padding: 15px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-    }
-
-    .circle-container {
-        width: 180px;
-        height: 180px;
-    }
-
-    .text {
         font-size: 10px;
     }
 
+    .timer-container {
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .circle-container {
+        width: 160px;
+        height: 160px;
+    }
+
+    .text h2 {
+        font-size: 12px;
+    }
+
     .timer {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .subtext {
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .settings-icon, .volume-icon, .mute-icon {
-        width: 20px;
-        height: 20px;
-    }
-
-    .buttons {
-        width: 100%;
-        gap: 5px;
-        padding-bottom: 10px;
-    }
-
-    .button {
-        padding: 6px 12px;
-        width: auto;
-        font-size: 12px;
-    }
-
-    .saved-timers-panel {
-        width: 100%;
-        padding: 10px;
-        height: auto;
-        margin-top: 20px;
-    }
-
-    .saved-timer-item {
-        font-size: 12px;
-        padding: 8px;
-        display: flex;
-        justify-content: space-between;
-        gap: 5px;
-    }
-
-    .delete-icon {
         width: 16px;
         height: 16px;
     }
 
-    .plus-icon {
-        width: 20px;
-        height: 20px;
+    .buttons {
+        width: 100%;
+        gap: 3px;
+        padding-bottom: 5px;
+    }
+
+    .button {
+        padding: 5px 10px;
+        width: auto;
+        font-size: 10px;
+    }
+
+    .saved-timers-panel {
+        width: 100%;
+        padding: 8px;
+        margin-top: 15px;
+    }
+
+    .saved-timer-item {
+        font-size: 10px;
+        padding: 6px;
+        display: flex;
+        justify-content: space-between;
+        gap: 3px;
+    }
+
+    .plus-icon, .delete-icon {
+        width: 16px;
+        height: 16px;
     }
 }
 
