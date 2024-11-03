@@ -43,7 +43,7 @@ To get started, ensure you have [Node.js](https://nodejs.org/) installed on your
 		Start: Click the “Start” button to begin the countdown.
 		Pause: Click “Pause” to temporarily stop the timer.
 		Reset: Click “Reset” to set the timer back to the original time. 
-        Continue: Appears after timer was "Started" and "Paused" and allows to continue counting after pause.
+                Continue: Appears after timer was "Started" and "Paused" and allows to continue counting after pause.
 
 
 **Saving and Loading Timers**
