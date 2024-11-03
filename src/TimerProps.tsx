@@ -94,10 +94,14 @@ const Timer: React.FC<TimerProps> = ({ title: initialTitle, endTime, elapsedTime
   const startTimer = () => {
     setIsRunning(true);
     setIsEnded(false);
+    if (!isPaused) {
+      setIsPaused(false);
+    }
   };
 
   const pauseTimer = () => {
     setIsRunning(false);
+    setIsPaused(true);
   };
 
   const resetTimer = () => {
@@ -194,6 +198,9 @@ const Timer: React.FC<TimerProps> = ({ title: initialTitle, endTime, elapsedTime
     setIsEnded(false);
   };
 
+  const [isPaused, setIsPaused] = useState(false);
+  const startButtonText = isPaused ? "Continue" : "Start";
+
   const radius = 115;
   const circumference = 2 * Math.PI * radius;
   const progress = (timeCounter / userEndTime) * circumference;
@@ -289,7 +296,7 @@ const Timer: React.FC<TimerProps> = ({ title: initialTitle, endTime, elapsedTime
           </div>
 
           <div className="buttons">
-            <button className="button" onClick={startTimer}>Start</button>
+            <button className="button" onClick={startTimer}>{startButtonText}</button>
             <button className="button" onClick={pauseTimer}>Pause</button>
             <button className="button" onClick={resetTimer}>Reset</button>
           </div>

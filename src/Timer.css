@@ -132,6 +132,8 @@ body, html {
     text-align: center;
     transition: background-color 0.3s ease, color 0.3s ease;
     margin-top: 35px;
+    justify-content: center;
+    display: flex;
 }
 
 .button:hover {
@@ -426,7 +428,7 @@ body, html {
     }
 
     .buttons {
-        width: 90%;
+        width: 80%;
         display: flex;
         justify-content: space-around;
         margin-top: 67px;
