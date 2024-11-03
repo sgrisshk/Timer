@@ -407,48 +407,39 @@ body, html {
 
 
 @media (max-width: 480px) {
-
-    .app-outer-wrapper {
-        padding: 0 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 100%;
-    }
-
     .app-container {
         width: 90%;
-        padding: 5px;
+        padding: 10px 0;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-
     .timer-container {
-        width: 90%;
-        padding: 5px;
-        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .buttons {
-        width: 100%;
+        width: 90%;
         display: flex;
-        justify-content: space-evenly;
-        padding: 5px;
+        justify-content: space-around;
+        margin-top: 10px;
+        margin-bottom: 20px;
     }
 
     .button {
-        padding: 4px 8px;
-        font-size: 12px;
-        flex: 1;
-        margin: 0 3px;
+        padding: 6px 10px;
+        font-size: 14px;
+        flex: none;
+        margin: 0 5px;
+        border-radius: 5px;
     }
 }
-
 @font-face{
     font-family: Open-Sans;
     src: url("https://fonts.google.com/specimen/Open+Sans?preview.text=Whereas%20recognition%20of%20the%20inherent%20dignity");
