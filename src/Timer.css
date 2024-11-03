@@ -5,6 +5,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+body, html {
+    overflow-x: hidden;
+}
+
 .app-outer-wrapper {
     display: flex;
     flex-direction: column;
@@ -401,20 +405,48 @@ body {
 }
 
 
+
 @media (max-width: 480px) {
 
-    .timer-container {
-        width: 400px;
-        height: 400px;
-        padding: 8px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+    .app-outer-wrapper {
+        padding: 0 5px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        max-width: 100%;
     }
 
+    .app-container {
+        width: 90%;
+        padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .timer-container {
+        width: 90%;
+        padding: 5px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+
+    .button {
+        padding: 4px 8px;
+        font-size: 12px;
+        flex: 1;
+        margin: 0 3px;
+    }
 }
 
 @font-face{
