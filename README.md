@@ -20,7 +20,7 @@ To get started, ensure you have [Node.js](https://nodejs.org/) installed on your
 ### Steps:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/timer-app.git
+   git clone https://github.com/sgrisshk/Timer.git
    cd timer-app
 
 2. Install the dependencies:
@@ -28,21 +28,23 @@ To get started, ensure you have [Node.js](https://nodejs.org/) installed on your
    npm install
    ```
  
-4.	Start the application in development mode:
+3. Start the application in development mode:
     ```
     npm start
     ```
    
 
-5.	Open http://localhost:3000 in your browser to see the app in action.
+4. Open http://localhost:3000 in your browser to see the app in action.
 
 ## Usage
-
+ 
 **Starting the Timer**
 
 		Start: Click the “Start” button to begin the countdown.
 		Pause: Click “Pause” to temporarily stop the timer.
-		Reset: Click “Reset” to set the timer back to the original time.
+		Reset: Click “Reset” to set the timer back to the original time. 
+        Continue: Appears after timer was "Started" and "Paused" and allows to continue counting after pause.
+
 
 **Saving and Loading Timers**
 
@@ -115,3 +117,16 @@ npm run build-storybook
 ```
 Builds Storybook for deployment.
 
+## Additional links
+
+**Link to a GitHub repository**
+
+[GitHub](https://github.com/sgrisshk/Timer)
+****
+**Link to a published page**
+
+[Site](https://cute-kangaroo-779d8e.netlify.app)
+****
+**Link to layout design**
+
+[Figma](https://www.figma.com/design/k5I3q66A9edRGRveNATK22/Timer?node-id=0-1&t=pMpJ8ozsbPopPZbB-1)
