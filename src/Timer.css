@@ -403,62 +403,90 @@ body {
 
 @media (max-width: 480px) {
 
-    .timer-container {
-        width: 280px;
-        height: 280px;
-        padding: 20px;
-        margin-top: 40px;
-        margin-bottom: 40px;
+    .app-outer-wrapper {
+        padding: 10px;
     }
 
     .header-bar {
-        padding: 10px 20px;
-        top: 10px;
+        padding: 8px;
+        top: 5px;
     }
 
     .header-title {
-        font-size: 20px;
+        font-size: 16px;
+        margin-bottom: 4px;
     }
 
     .header-slogan {
         font-size: 12px;
+        margin-top: 0;
     }
 
-    .saved-timers-panel {
-        width: 280px;
-        height: auto;
-        padding: 10px;
+    .timer-container {
+        width: 220px;
+        height: 220px;
+        padding: 15px;
+        margin-top: 15px;
+        margin-bottom: 15px;
     }
 
-    .settings-icon,
-    .mute-icon,
-    .volume-icon {
-        width: 25px;
-        height: 25px;
+    .circle-container {
+        width: 180px;
+        height: 180px;
+    }
+
+    .text {
+        font-size: 10px;
     }
 
     .timer {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .subtext {
-        font-size: 14px;
+        font-size: 12px;
+    }
+
+    .settings-icon, .volume-icon, .mute-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .buttons {
+        width: 100%;
+        gap: 5px;
+        padding-bottom: 10px;
     }
 
     .button {
-        padding: 8px 15px;
-        width: 80px;
-        font-size: 14px;
+        padding: 6px 12px;
+        width: auto;
+        font-size: 12px;
+    }
+
+    .saved-timers-panel {
+        width: 100%;
+        padding: 10px;
+        height: auto;
+        margin-top: 20px;
     }
 
     .saved-timer-item {
-        font-size: 14px;
+        font-size: 12px;
         padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
     }
 
     .delete-icon {
-        width: 14px;
-        height: 14px;
+        width: 16px;
+        height: 16px;
+    }
+
+    .plus-icon {
+        width: 20px;
+        height: 20px;
     }
 }
 
