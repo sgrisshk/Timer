@@ -411,7 +411,7 @@ body, html {
 @media (max-width: 480px) {
 
     .app-container {
-        width: 90%;
+        width: 80%;
         padding: 10px 0;
         display: flex;
         flex-direction: column;
@@ -428,7 +428,7 @@ body, html {
     }
 
     .buttons {
-        width: 60%;
+        width: 80px;
         display: flex;
         justify-content: space-around;
         margin-top: 67px;
